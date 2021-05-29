@@ -1,11 +1,12 @@
 from tensorflow.keras.layers import Dense,Flatten,Dropout,Activation,Conv2D,MaxPooling2D
 from tensorflow.keras.models import Sequential
+import matplotlib.pyplot as plt
 import tensorflow as tf
 import numpy as np
 import pickle
 import cv2
 from tensorflow.python.compiler.mlcompute import mlcompute
-mlcompute.set_mlc_device(device_name='cpu')
+mlcompute.set_mlc_device(device_name='gpu')
 Categories = ['Cat','Dog']
 X = pickle.load(open('X.pickle','rb'))
 y = pickle.load(open('Y.pickle','rb'))

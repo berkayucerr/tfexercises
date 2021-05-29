@@ -14,3 +14,4 @@ model = tf.keras.models.load_model('64x3-CNN.model')
 predictions = model.predict([prepare("dog.jpg")])
 print(Categories[int(predictions[0][0])])
 
+
